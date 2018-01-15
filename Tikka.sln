@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TikkaIos", "TikkaIos\TikkaIos.csproj", "{70385CAA-529B-4D7B-A9E3-FE7BF022089A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhone = Debug|iPhone
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70385CAA-529B-4D7B-A9E3-FE7BF022089A}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{70385CAA-529B-4D7B-A9E3-FE7BF022089A}.Debug|iPhone.Build.0 = Debug|iPhone
+		{70385CAA-529B-4D7B-A9E3-FE7BF022089A}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{70385CAA-529B-4D7B-A9E3-FE7BF022089A}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{70385CAA-529B-4D7B-A9E3-FE7BF022089A}.Release|iPhone.ActiveCfg = Release|iPhone
+		{70385CAA-529B-4D7B-A9E3-FE7BF022089A}.Release|iPhone.Build.0 = Release|iPhone
+		{70385CAA-529B-4D7B-A9E3-FE7BF022089A}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{70385CAA-529B-4D7B-A9E3-FE7BF022089A}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C353477-B87B-4F91-BFB2-3A07450F6F16}
+	EndGlobalSection
+EndGlobal

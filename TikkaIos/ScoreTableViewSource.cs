@@ -10,30 +10,34 @@ namespace TikkaIos
 {
     public class ScoreTableViewSource : UITableViewSource
     {
-        string CellIdentifier = "ScoreTableViewCell";
+        public static string CellIdentifier = "ScoreTableViewCell";
+        List<ScoreItem> items = new List<ScoreItem>();
+
+        public ScoreTableViewSource() : base()
+        {
+            items = ScoreItem.GetTestData(10);
+        }
+
 
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
-            //UITableViewCell cell = tableView.DequeueReusableCell(CellIdentifier);
-            //string item = TableItems[indexPath.Row];
-
-            ////---- if there are no cells to reuse, create a new one
-            //if (cell == null)
-            //{ cell = new UITableViewCell(UITableViewCellStyle.Default, CellIdentifier); }
-
-            //cell.TextLabel.Text = item;
-
-            //return cell;
-
-            UITableViewCell cell = tableView.DequeueReusableCell(CellIdentifier);
+            var cell = tableView.DequeueReusableCell(CellIdentifier, indexPath) as ScoreTableViewCell;
             cell.TextLabel.Text = $"index: {indexPath.Row}";
+
+            var currentItem = items.ElementAt(indexPath.Row);
+            cell.TextLabel.Text = $"index: {currentItem.Index}, bid={currentItem.Bid}, recvd={currentItem.Received}";
 
             return cell;
         }
 
         public override nint RowsInSection(UITableView tableview, nint section)
         {
-            return 2;
+            return items.Count;
+        }
+
+        public override string TitleForHeader(UITableView tableView, nint section)
+        {
+            return "Tikka Score";
         }
     }
 }

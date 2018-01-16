@@ -70,6 +70,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ScoreItem.cs" />
+    <Compile Include="ScoreTableViewCell.cs" />
+    <Compile Include="ScoreTableViewCell.designer.cs">
+      <DependentUpon>ScoreTableViewCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="ScoreTableViewController.cs" />
     <Compile Include="ScoreTableViewController.designer.cs">
       <DependentUpon>ScoreTableViewController.cs</DependentUpon>

@@ -6,8 +6,10 @@ namespace TikkaIos
 {
     public partial class ScoreTableViewController : UITableViewController
     {
+
         public ScoreTableViewController (IntPtr handle) : base (handle)
         {
+            table.RegisterClassForCellReuse(typeof(ScoreTableViewCell), ScoreTableViewSource.CellIdentifier);
         }
         public override void ViewDidLoad()
         {

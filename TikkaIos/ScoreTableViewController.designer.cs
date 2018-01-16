@@ -7,14 +7,23 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace TikkaIos
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("ScoreTableViewController")]
+    partial class ScoreTableViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView table { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (table != null) {
+                table.Dispose ();
+                table = null;
+            }
         }
     }
 }

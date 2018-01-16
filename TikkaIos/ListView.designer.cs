@@ -7,11 +7,12 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace TikkaIos
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("ListView")]
+    partial class ListView
     {
         void ReleaseDesignerOutlets ()
         {

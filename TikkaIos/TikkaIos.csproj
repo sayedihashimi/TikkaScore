@@ -59,6 +59,10 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ListView.cs" />
+    <Compile Include="ListView.designer.cs">
+      <DependentUpon>ListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="GettingStarted.Xamarin" />
@@ -66,6 +70,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ScoreTableViewController.cs" />
+    <Compile Include="ScoreTableViewController.designer.cs">
+      <DependentUpon>ScoreTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreTableViewSource.cs" />
+    <Compile Include="UIListView.cs" />
+    <Compile Include="UIListView.designer.cs">
+      <DependentUpon>UIListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>

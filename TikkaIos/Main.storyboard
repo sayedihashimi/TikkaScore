@@ -92,6 +92,8 @@
                                             <nil key="highlightedColor"/>
                                             <constraints>
                                                 <constraint id="10390" firstItem="9136" firstAttribute="width" constant="81"/>
+                                                <constraint id="11541" firstItem="9136" firstAttribute="width" constant="81"/>
+                                                <constraint id="11542" firstItem="9136" firstAttribute="height" constant="21"/>
                                             </constraints>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9137" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
@@ -109,7 +111,6 @@
                                     </subviews>
                                     <constraints>
                                         <constraint id="9615" firstItem="9135" firstAttribute="leading" secondItem="4157" secondAttribute="leading" constant="60"/>
-                                        <constraint id="9618" firstItem="9136" firstAttribute="leading" secondItem="9135" secondAttribute="centerX" constant="54"/>
                                         <constraint id="10387" firstItem="9138" firstAttribute="top" secondItem="9136" secondAttribute="top"/>
                                         <constraint id="10388" firstItem="9137" firstAttribute="top" secondItem="9138" secondAttribute="top"/>
                                         <constraint id="10389" firstItem="9136" firstAttribute="top" secondItem="9135" secondAttribute="top"/>
@@ -122,6 +123,8 @@
                                         <constraint id="10397" firstItem="9135" firstAttribute="centerY" secondItem="4157" secondAttribute="centerY"/>
                                         <constraint id="10677" firstItem="9138" firstAttribute="leading" secondItem="9136" secondAttribute="trailing" constant="47"/>
                                         <constraint id="10678" firstItem="9137" firstAttribute="leading" secondItem="9138" secondAttribute="centerX" constant="29"/>
+                                        <constraint id="11539" firstItem="9136" firstAttribute="leading" secondItem="4157" secondAttribute="leading" constant="135"/>
+                                        <constraint id="11540" firstItem="9136" firstAttribute="centerY" secondItem="4157" secondAttribute="centerY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections/>
@@ -133,26 +136,35 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7953" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                            <rect key="frame" x="20" y="12" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7953" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="20" y="12" width="32" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint id="10963" firstItem="7953" firstAttribute="width" constant="32"/>
+                                                <constraint id="10964" firstItem="7953" firstAttribute="height" constant="21"/>
+                                            </constraints>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7954" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7954" translatesAutoresizingMaskIntoConstraints="NO">
                                             <rect key="frame" x="60" y="11.5" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint id="11246" firstItem="7954" firstAttribute="width" constant="42"/>
+                                                <constraint id="11247" firstItem="7954" firstAttribute="height" constant="21"/>
+                                            </constraints>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7955" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7955" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                             <rect key="frame" x="165" y="12" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint id="11849" firstItem="7955" firstAttribute="width" constant="42"/>
+                                                <constraint id="11850" firstItem="7955" firstAttribute="height" constant="21"/>
+                                            </constraints>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7957" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                             <rect key="frame" x="294" y="12" width="42" height="21"/>
@@ -169,6 +181,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint id="10961" firstItem="7953" firstAttribute="leading" secondItem="7952" secondAttribute="leading" constant="20"/>
+                                        <constraint id="10962" firstItem="7953" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
+                                        <constraint id="11248" firstItem="7954" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
+                                        <constraint id="11249" firstItem="7954" firstAttribute="leading" secondItem="7952" secondAttribute="leading" constant="60"/>
+                                        <constraint id="11543" firstItem="7955" firstAttribute="leading" secondItem="7952" secondAttribute="leading" constant="135"/>
+                                        <constraint id="11848" firstItem="7955" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="labelRound" destination="7952" id="name-outlet-7952"/>

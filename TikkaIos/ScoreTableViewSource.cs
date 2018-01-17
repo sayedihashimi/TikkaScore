@@ -23,17 +23,36 @@ namespace TikkaIos
         {
             int section = indexPath.Section;
             int row = indexPath.Row;
-            if(section == 0 && row == 0)
+            if(section == 0)
             {
-                var titleCell = tableView.DequeueReusableCell("titleCell", indexPath);
-                if(titleCell == null)
+                if (row == 0)
                 {
-                    titleCell = new UITableViewCell();
-                }
+                    var titleCell = tableView.DequeueReusableCell("titleCell", indexPath);
+                    if (titleCell == null)
+                    {
+                        titleCell = new UITableViewCell();
+                    }
 
-                titleCell.TextLabel.Text = "Tikka Score";
-                titleCell.UserInteractionEnabled = false;
-                return titleCell;
+                    titleCell.TextLabel.Text = "Tikka Score";
+                    titleCell.UserInteractionEnabled = false;
+                    return titleCell;
+                }
+                else if(row == 1)
+                {
+                    var cell = new UITableViewCell();
+                    cell.TextLabel.Text = "Team A              Team B";
+                    return cell;
+                }
+                else if(row == 2)
+                {
+                    var cell = new UITableViewCell();
+                    cell.TextLabel.Text = "Bid     Received     Bid Receive";
+                    return cell;
+                }
+                else
+                {
+                    throw new IndexOutOfRangeException($"title row:[{row}] is invalid");
+                }
             }
             if (section == 1)
             {
@@ -54,7 +73,11 @@ namespace TikkaIos
 
         public override nint RowsInSection(UITableView tableview, nint section)
         {
-            if(section == 1)
+            if(section == 0)
+            {
+                return 3;
+            }
+            else if(section == 1)
             {
                 return items.Count;
             }

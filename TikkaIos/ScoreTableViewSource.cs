@@ -18,7 +18,6 @@ namespace TikkaIos
             items = ScoreItem.GetTestData(10);
         }
 
-
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
         {
             int section = indexPath.Section;
@@ -45,8 +44,8 @@ namespace TikkaIos
                 }
                 else if(row == 2)
                 {
-                    var cell = new UITableViewCell();
-                    cell.TextLabel.Text = "Bid     Received     Bid Receive";
+                    var cell = tableView.DequeueReusableCell("bidReceiveCell", indexPath);
+                    //cell.TextLabel.Text = "Bid     Received     Bid Receive";
                     return cell;
                 }
                 else

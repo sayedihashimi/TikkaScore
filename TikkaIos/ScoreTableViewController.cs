@@ -10,6 +10,7 @@ namespace TikkaIos
         public ScoreTableViewController (IntPtr handle) : base (handle)
         {
             TableView.RegisterClassForCellReuse(typeof(ScoreTableViewCell), ScoreTableViewSource.CellIdentifier);
+            TableView.RegisterClassForCellReuse(typeof(BidReceiveTableViewCell), "bidReceiveCell");
         }
         public override void ViewDidLoad()
         {

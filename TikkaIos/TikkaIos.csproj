@@ -59,6 +59,10 @@
     <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BidReceiveTableViewCell.cs" />
+    <Compile Include="BidReceiveTableViewCell.designer.cs">
+      <DependentUpon>BidReceiveTableViewCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListView.cs" />
     <Compile Include="ListView.designer.cs">
       <DependentUpon>ListView.cs</DependentUpon>

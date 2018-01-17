@@ -9,13 +9,13 @@ namespace TikkaIos
 
         public ScoreTableViewController (IntPtr handle) : base (handle)
         {
-            table.RegisterClassForCellReuse(typeof(ScoreTableViewCell), ScoreTableViewSource.CellIdentifier);
+            TableView.RegisterClassForCellReuse(typeof(ScoreTableViewCell), ScoreTableViewSource.CellIdentifier);
         }
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             // table = new UITableView(View.Bounds); // defaults to Plain style
-            table.Source = new ScoreTableViewSource();
+            TableView.Source = new ScoreTableViewSource();
             // Add(table);
         }
     }

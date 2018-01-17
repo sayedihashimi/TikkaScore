@@ -56,11 +56,11 @@ namespace TikkaIos
             }
             if (section == 1)
             {
-                var cell = tableView.DequeueReusableCell(CellIdentifier, indexPath) as ScoreTableViewCell;
-                cell.TextLabel.Text = $"index: {indexPath.Row}";
-
+                var cell = tableView.DequeueReusableCell(ScoreTableViewSource.CellIdentifier, indexPath) as ScoreTableViewCell;
+        
                 var currentItem = items.ElementAt(indexPath.Row);
-                cell.TextLabel.Text = $"index: {currentItem.Index}, bid={currentItem.Bid}, recvd={currentItem.Received}";
+                cell.SetValues(indexPath.Row, 100 + indexPath.Row, 200 + indexPath.Row, 300 + indexPath.Row, 400 + indexPath.Row);
+                // cell.TextLabel.Text = $"index: {currentItem.Index}, bid={currentItem.Bid}, recvd={currentItem.Received}";
 
                 return cell;
             }

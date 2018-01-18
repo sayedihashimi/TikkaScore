@@ -84,6 +84,10 @@
       <DependentUpon>ScoreTableViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="ScoreTableViewSource.cs" />
+    <Compile Include="TeamNameTableViewCell.cs" />
+    <Compile Include="TeamNameTableViewCell.designer.cs">
+      <DependentUpon>TeamNameTableViewCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIListView.cs" />
     <Compile Include="UIListView.designer.cs">
       <DependentUpon>UIListView.cs</DependentUpon>

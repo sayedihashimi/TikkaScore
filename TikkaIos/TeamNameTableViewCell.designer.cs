@@ -11,11 +11,8 @@ using UIKit;
 
 namespace TikkaIos
 {
-    [Register ("BidReceiveTableViewCell")]
-    partial class BidReceiveTableViewCell
+    [Register ("TeamNameTableViewCell")]
+    partial class TeamNameTableViewCell
     {
-        void ReleaseDesignerOutlets ()
-        {
-        }
     }
 }

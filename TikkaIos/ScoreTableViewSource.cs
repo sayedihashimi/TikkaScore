@@ -38,14 +38,13 @@ namespace TikkaIos
                 }
                 else if(row == 1)
                 {
-                    var cell = new UITableViewCell();
-                    cell.TextLabel.Text = "Team A              Team B";
+                    var cell = tableView.DequeueReusableCell(ScoreTableViewController.TeamNameCellId, indexPath);
                     return cell;
                 }
                 else if(row == 2)
                 {
                     var cell = tableView.DequeueReusableCell("bidReceiveCell", indexPath);
-                    //cell.TextLabel.Text = "Bid     Received     Bid Receive";
+                    cell.UserInteractionEnabled = false;
                     return cell;
                 }
                 else

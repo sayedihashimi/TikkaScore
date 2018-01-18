@@ -14,5 +14,8 @@ namespace TikkaIos
     [Register ("TeamNameTableViewCell")]
     partial class TeamNameTableViewCell
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

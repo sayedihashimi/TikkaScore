@@ -19,7 +19,7 @@ namespace TikkaIos
         {
             base.ViewDidLoad();
             // table = new UITableView(View.Bounds); // defaults to Plain style
-            TableView.Source = new ScoreTableViewSource();
+            TableView.Source = new ScoreTableViewSource(this);
             // Add(table);
         }
     }

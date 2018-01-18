@@ -11,8 +11,11 @@ namespace TikkaIos
     public class ScoreItem
     {
         public int Index { get; set; }
-        public int Bid { get; set; }
-        public int Received { get; set; }
+        public int BidTeamA { get; set; }
+        public int WonTeamA { get; set; }
+
+        public int BidTeamB { get; set; }
+        public int WonTeamB { get; set; }
 
         public static List<ScoreItem> GetTestData(int numItems = 5)
         {
@@ -28,8 +31,10 @@ namespace TikkaIos
                 items.Add(new ScoreItem
                 {
                     Index = i,
-                    Bid = 1,
-                    Received = 2
+                    BidTeamA = 1,
+                    WonTeamA = 2,
+                    BidTeamB = 1,
+                    WonTeamB = 2
                 });
             }
 

@@ -17,5 +17,17 @@ namespace TikkaIos
             labelBidB.Text = bidB.ToString();
             labelReceivedB.Text = receivedB.ToString();
         }
+        public void SetValues(ScoreItem score)
+        {
+            labelRound.Text = score.Index.ToString();
+            labelBidA.Text = score.BidTeamA.ToString();
+            labelReceivedA.Text = score.WonTeamA.ToString();
+            labelBidB.Text = score.BidTeamB.ToString();
+            labelReceivedB.Text = score.WonTeamB.ToString();
+        }
+        public void SetHiddenForDetailsButton(bool hidden)
+        {
+            this.scoreDetailsButton.Hidden = hidden;
+        }
     }
 }

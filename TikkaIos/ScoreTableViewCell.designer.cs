@@ -34,6 +34,10 @@ namespace TikkaIos
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel labelRound { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton scoreDetailsButton { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (labelBidA != null) {
@@ -59,6 +63,11 @@ namespace TikkaIos
             if (labelRound != null) {
                 labelRound.Dispose ();
                 labelRound = null;
+            }
+
+            if (scoreDetailsButton != null) {
+                scoreDetailsButton.Dispose ();
+                scoreDetailsButton = null;
             }
         }
     }

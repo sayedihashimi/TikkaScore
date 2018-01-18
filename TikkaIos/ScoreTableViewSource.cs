@@ -12,9 +12,11 @@ namespace TikkaIos
     {
         public static string CellIdentifier = "ScoreTableViewCell";
         List<ScoreItem> items = new List<ScoreItem>();
+        private ScoreTableViewController Owner;
 
-        public ScoreTableViewSource() : base()
+        public ScoreTableViewSource(ScoreTableViewController owner) : base()
         {
+            Owner = owner;
             items = ScoreItem.GetTestData(10);
         }
 
@@ -57,9 +59,9 @@ namespace TikkaIos
                 var cell = tableView.DequeueReusableCell(ScoreTableViewSource.CellIdentifier, indexPath) as ScoreTableViewCell;
         
                 var currentItem = items.ElementAt(indexPath.Row);
-                cell.SetValues(indexPath.Row + 1, 100 + indexPath.Row, 200 + indexPath.Row, 300 + indexPath.Row, 400 + indexPath.Row);
+                // cell.SetValues(indexPath.Row + 1, 100 + indexPath.Row, 200 + indexPath.Row, 300 + indexPath.Row, 400 + indexPath.Row);
                 // cell.TextLabel.Text = $"index: {currentItem.Index}, bid={currentItem.Bid}, recvd={currentItem.Received}";
-
+                cell.SetValues(currentItem);
                 return cell;
             }
             else
@@ -89,6 +91,37 @@ namespace TikkaIos
         {
             return 4;
         }
+
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            // UIAlertController okAlertController = UIAlertController.Create("Row Selected", $"section={indexPath.Section} row={indexPath.Row}", UIAlertControllerStyle.Alert);
+            // okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+            // Owner.PresentViewController (okAlertController, true, null);
+            // tableView.DeselectRow(indexPath, true);
+            ScoreTableViewCell cell = tableView.CellAt(indexPath) as ScoreTableViewCell;
+            if(cell != null)
+            {
+                cell.SetHiddenForDetailsButton(false);
+            }
+        }
+        public override void RowDeselected(UITableView tableView, NSIndexPath indexPath)
+        {
+            ScoreTableViewCell cell = tableView.CellAt(indexPath) as ScoreTableViewCell;
+            if (cell != null)
+            {
+                cell.SetHiddenForDetailsButton(true);
+            }
+        }
+        /*
+public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
+{
+    UIAlertController okAlertController = UIAlertController.Create ("Row Selected", tableItems[indexPath.Row], UIAlertControllerStyle.Alert);
+    okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+    ...
+
+    tableView.DeselectRow (indexPath, true);
+}
+         */
         //public override string[] SectionIndexTitles(UITableView tableView)
         //{
         //    return new string [] { "One","Two","Three","Four" };

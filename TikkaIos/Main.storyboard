@@ -216,6 +216,13 @@
                                                 <constraint id="12172" firstItem="7958" firstAttribute="width" constant="45"/>
                                             </constraints>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="12866" translatesAutoresizingMaskIntoConstraints="NO" hidden="YES">
+                                            <rect key="frame" x="392" y="11" width="22" height="22"/>
+                                            <state key="normal" title="Edit"/>
+                                            <constraints>
+                                                <constraint id="12869" firstItem="12866" firstAttribute="width" constant="22"/>
+                                            </constraints>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint id="10961" firstItem="7953" firstAttribute="leading" secondItem="7952" secondAttribute="leading" constant="20"/>
@@ -228,6 +235,8 @@
                                         <constraint id="12186" firstItem="7958" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
                                         <constraint id="12187" firstItem="7958" firstAttribute="leading" secondItem="7957" secondAttribute="trailing" constant="30"/>
                                         <constraint id="12188" firstItem="7957" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
+                                        <constraint id="12870" firstItem="12866" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
+                                        <constraint id="12871" firstItem="7958" firstAttribute="trailing" secondItem="12866" secondAttribute="leading" constant="2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -237,6 +246,7 @@
                                     <outlet property="labelReceivedA" destination="7955" id="name-outlet-7955"/>
                                     <outlet property="labelBidB" destination="7957" id="name-outlet-7957"/>
                                     <outlet property="labelReceivedB" destination="7958" id="name-outlet-7958"/>
+                                    <outlet property="scoreDetailsButton" destination="12866" id="name-outlet-12866"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

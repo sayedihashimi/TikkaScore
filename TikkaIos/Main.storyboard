@@ -74,39 +74,44 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9135" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9135" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                             <rect key="frame" x="60" y="12" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                             <constraints>
-                                                <constraint id="9616" firstItem="9135" firstAttribute="width" constant="42"/>
                                                 <constraint id="9870" firstItem="9135" firstAttribute="height" constant="21"/>
-                                                <constraint id="9871" firstItem="9135" firstAttribute="width" constant="42"/>
+                                                <constraint id="9871" firstItem="9135" firstAttribute="width" constant="45"/>
                                             </constraints>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9136" translatesAutoresizingMaskIntoConstraints="NO">
-                                            <rect key="frame" x="135" y="12" width="81" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9136" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES" text="Won">
+                                            <rect key="frame" x="136" y="11.5" width="81" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                             <constraints>
-                                                <constraint id="10390" firstItem="9136" firstAttribute="width" constant="81"/>
-                                                <constraint id="11541" firstItem="9136" firstAttribute="width" constant="81"/>
+                                                <constraint id="11541" firstItem="9136" firstAttribute="width" constant="45"/>
                                                 <constraint id="11542" firstItem="9136" firstAttribute="height" constant="21"/>
                                             </constraints>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Received" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9137" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                            <rect key="frame" x="313" y="12" width="81" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Won" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9137" translatesAutoresizingMaskIntoConstraints="NO">
+                                            <rect key="frame" x="349" y="11.5" width="45" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <constraints>
+                                                <constraint id="12166" firstItem="9137" firstAttribute="width" constant="45"/>
+                                                <constraint id="12167" firstItem="9137" firstAttribute="height" constant="21"/>
+                                            </constraints>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9138" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                            <rect key="frame" x="263" y="12" width="42" height="21"/>
+                                            <rect key="frame" x="272" y="12" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
+                                            <constraints>
+                                                <constraint id="12181" firstItem="9138" firstAttribute="width" constant="45"/>
+                                            </constraints>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -121,10 +126,10 @@
                                         <constraint id="10395" firstItem="9138" firstAttribute="centerY" secondItem="9136" secondAttribute="centerY"/>
                                         <constraint id="10396" firstItem="9136" firstAttribute="centerY" secondItem="4157" secondAttribute="centerY"/>
                                         <constraint id="10397" firstItem="9135" firstAttribute="centerY" secondItem="4157" secondAttribute="centerY"/>
-                                        <constraint id="10677" firstItem="9138" firstAttribute="leading" secondItem="9136" secondAttribute="trailing" constant="47"/>
-                                        <constraint id="10678" firstItem="9137" firstAttribute="leading" secondItem="9138" secondAttribute="centerX" constant="29"/>
-                                        <constraint id="11539" firstItem="9136" firstAttribute="leading" secondItem="4157" secondAttribute="leading" constant="135"/>
                                         <constraint id="11540" firstItem="9136" firstAttribute="centerY" secondItem="4157" secondAttribute="centerY"/>
+                                        <constraint id="12178" firstItem="9136" firstAttribute="leading" secondItem="9135" secondAttribute="trailing" constant="30"/>
+                                        <constraint id="12179" firstItem="4157" firstAttribute="trailing" secondItem="9137" secondAttribute="trailing" constant="20"/>
+                                        <constraint id="12180" firstItem="9137" firstAttribute="leading" secondItem="9138" secondAttribute="trailing" constant="30"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections/>
@@ -147,38 +152,43 @@
                                             </constraints>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7954" translatesAutoresizingMaskIntoConstraints="NO">
-                                            <rect key="frame" x="60" y="11.5" width="42" height="21"/>
+                                            <rect key="frame" x="60" y="11.5" width="45" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                             <constraints>
-                                                <constraint id="11246" firstItem="7954" firstAttribute="width" constant="42"/>
+                                                <constraint id="11246" firstItem="7954" firstAttribute="width" constant="45"/>
                                                 <constraint id="11247" firstItem="7954" firstAttribute="height" constant="21"/>
                                             </constraints>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7955" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                            <rect key="frame" x="165" y="12" width="42" height="21"/>
+                                            <rect key="frame" x="135" y="12" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                             <constraints>
-                                                <constraint id="11849" firstItem="7955" firstAttribute="width" constant="42"/>
                                                 <constraint id="11850" firstItem="7955" firstAttribute="height" constant="21"/>
+                                                <constraint id="12176" firstItem="7955" firstAttribute="width" constant="45"/>
                                             </constraints>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7957" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                            <rect key="frame" x="294" y="12" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7957" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                            <rect key="frame" x="275" y="12" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint id="12182" firstItem="7957" firstAttribute="width" constant="45"/>
+                                            </constraints>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7958" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7958" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                             <rect key="frame" x="352" y="12" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint id="12171" firstItem="7958" firstAttribute="height" constant="21"/>
+                                                <constraint id="12172" firstItem="7958" firstAttribute="width" constant="45"/>
+                                            </constraints>
                                         </label>
                                     </subviews>
                                     <constraints>
@@ -186,8 +196,12 @@
                                         <constraint id="10962" firstItem="7953" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
                                         <constraint id="11248" firstItem="7954" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
                                         <constraint id="11249" firstItem="7954" firstAttribute="leading" secondItem="7952" secondAttribute="leading" constant="60"/>
-                                        <constraint id="11543" firstItem="7955" firstAttribute="leading" secondItem="7952" secondAttribute="leading" constant="135"/>
-                                        <constraint id="11848" firstItem="7955" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
+                                        <constraint id="11848" firstItem="7955" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY" constant="0.75"/>
+                                        <constraint id="12170" firstItem="7952" firstAttribute="trailing" secondItem="7958" secondAttribute="trailing" constant="20"/>
+                                        <constraint id="12177" firstItem="7955" firstAttribute="leading" secondItem="7954" secondAttribute="trailing" constant="30"/>
+                                        <constraint id="12186" firstItem="7958" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
+                                        <constraint id="12187" firstItem="7958" firstAttribute="leading" secondItem="7957" secondAttribute="trailing" constant="30"/>
+                                        <constraint id="12188" firstItem="7957" firstAttribute="centerY" secondItem="7952" secondAttribute="centerY"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

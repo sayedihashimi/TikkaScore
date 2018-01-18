@@ -58,7 +58,7 @@ namespace TikkaIos
                 var cell = tableView.DequeueReusableCell(ScoreTableViewSource.CellIdentifier, indexPath) as ScoreTableViewCell;
         
                 var currentItem = items.ElementAt(indexPath.Row);
-                cell.SetValues(indexPath.Row, 100 + indexPath.Row, 200 + indexPath.Row, 300 + indexPath.Row, 400 + indexPath.Row);
+                cell.SetValues(indexPath.Row + 1, 100 + indexPath.Row, 200 + indexPath.Row, 300 + indexPath.Row, 400 + indexPath.Row);
                 // cell.TextLabel.Text = $"index: {currentItem.Index}, bid={currentItem.Bid}, recvd={currentItem.Received}";
 
                 return cell;

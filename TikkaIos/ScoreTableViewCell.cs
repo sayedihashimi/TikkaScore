@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using System;
+using TikkaIos.Data;
 using UIKit;
 
 namespace TikkaIos
@@ -20,6 +21,14 @@ namespace TikkaIos
         public void SetValues(ScoreItem score)
         {
             labelRound.Text = score.Index.ToString();
+            labelBidA.Text = score.BidTeamA.ToString();
+            labelReceivedA.Text = score.WonTeamA.ToString();
+            labelBidB.Text = score.BidTeamB.ToString();
+            labelReceivedB.Text = score.WonTeamB.ToString();
+        }
+        public void SetValues(GameScore score)
+        {
+            labelRound.Text = score.ScoreIndex.ToString();
             labelBidA.Text = score.BidTeamA.ToString();
             labelReceivedA.Text = score.WonTeamA.ToString();
             labelBidB.Text = score.BidTeamB.ToString();

@@ -69,7 +69,6 @@ namespace TikkaIos.Data
                 // DeleteAllGames();
                 using (var conn = new SQLiteConnection(dbPath))
                 {
-                    
                     if (!DoesTableExist(conn, DatabaseConsts.GameTableName))
                     {
                         conn.CreateTable<Game>();
@@ -90,6 +89,24 @@ namespace TikkaIos.Data
             return !string.IsNullOrWhiteSpace(foundTableName);
         }
 
+        public Game GetLastGame()
+        {
+            using (var conn = GetNewConnection())
+            {
+                var result = (from g in conn.Table<Game>()
+                             orderby g.StartDate
+                             select g).FirstOrDefault<Game>();
+                if (result != null)
+                {
+                    return GetGameById(result.Id);
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
         internal void InsertDummyDataIfNotExists()
         {
             int numGames = GetNumberOfGames();
@@ -101,11 +118,39 @@ namespace TikkaIos.Data
                 game1.Scores.Add(new GameScore()
                 {
                     ScoreIndex = 0,
-                    BidTeamA = 1,
-                    WonTeamA = 2,
-                    BidTeamB = 3,
-                    WonTeamB = 4
+                    BidTeamA = 8,
+                    WonTeamA = 8,
+                    BidTeamB = 0,
+                    WonTeamB = 0
                 });
+
+                game1.Scores.Add(new GameScore()
+                {
+                    ScoreIndex = 1,
+                    BidTeamA = 0,
+                    WonTeamA = 0,
+                    BidTeamB = 9,
+                    WonTeamB = 9
+                });
+
+                game1.Scores.Add(new GameScore()
+                {
+                    ScoreIndex = 2,
+                    BidTeamA = 10,
+                    WonTeamA = -20,
+                    BidTeamB = 0,
+                    WonTeamB = 0
+                });
+
+                game1.Scores.Add(new GameScore()
+                {
+                    ScoreIndex = 3,
+                    BidTeamA = 0,
+                    WonTeamA = 0,
+                    BidTeamB = 13,
+                    WonTeamB = 26
+                });
+
                 SaveGame(game1);
 
 

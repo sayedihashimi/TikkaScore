@@ -19,7 +19,8 @@ namespace TikkaIos
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            TableView.Source = new ScoreTableViewSource(this);
+            Game game = new GameDatabase(DatabaseConsts.GetDbPath()).GetLastGame();
+            TableView.Source = new ScoreTableViewSource(this, game);
 
             try
             {

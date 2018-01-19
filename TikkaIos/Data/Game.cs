@@ -34,7 +34,7 @@ namespace TikkaIos.Data
         }
 
         [Column("startDate")]
-        public DateTime StartDate { get; set; }
+        public DateTime StartDate { get; set; } = DateTime.Now;
 
         [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<GameScore> Scores { get; set; } = new List<GameScore>();

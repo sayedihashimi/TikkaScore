@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Foundation;
+using TikkaIos.Data;
 using UIKit;
 
 namespace TikkaIos
@@ -13,10 +14,12 @@ namespace TikkaIos
         public static string CellIdentifier = "ScoreTableViewCell";
         List<ScoreItem> items = new List<ScoreItem>();
         private ScoreTableViewController Owner;
+        private Game Game { get; set; }
 
-        public ScoreTableViewSource(ScoreTableViewController owner) : base()
+        public ScoreTableViewSource(ScoreTableViewController owner,Game game) : base()
         {
             Owner = owner;
+            Game = game;
             items = ScoreItem.GetTestData(10);
         }
 
@@ -58,8 +61,15 @@ namespace TikkaIos
             {
                 var cell = tableView.DequeueReusableCell(ScoreTableViewSource.CellIdentifier, indexPath) as ScoreTableViewCell;
         
-                var currentItem = items.ElementAt(indexPath.Row);
-                cell.SetValues(currentItem);
+//                var currentItem = items.ElementAt(indexPath.Row);
+  //              cell.SetValues(currentItem);
+
+                if(Game != null)
+                {
+                    var currentScore = Game.Scores.ElementAt(indexPath.Row);
+                    cell.SetValues(currentScore);
+                }
+
                 return cell;
             }
             else
@@ -77,7 +87,14 @@ namespace TikkaIos
             }
             else if(section == 1)
             {
-                return items.Count;
+                if(Game != null)
+                {
+                    return Game.Scores.Count;
+                }
+                else
+                {
+                    return 0;
+                }
             }
             else
             {

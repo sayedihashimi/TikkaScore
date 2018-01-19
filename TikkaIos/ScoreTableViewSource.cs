@@ -92,10 +92,6 @@ namespace TikkaIos
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
-            // UIAlertController okAlertController = UIAlertController.Create("Row Selected", $"section={indexPath.Section} row={indexPath.Row}", UIAlertControllerStyle.Alert);
-            // okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-            // Owner.PresentViewController (okAlertController, true, null);
-            // tableView.DeselectRow(indexPath, true);
             ScoreTableViewCell cell = tableView.CellAt(indexPath) as ScoreTableViewCell;
             if(cell != null)
             {
@@ -110,31 +106,5 @@ namespace TikkaIos
                 cell.SetHiddenForDetailsButton(true);
             }
         }
-        /*
-public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
-{
-    UIAlertController okAlertController = UIAlertController.Create ("Row Selected", tableItems[indexPath.Row], UIAlertControllerStyle.Alert);
-    okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-    ...
-
-    tableView.DeselectRow (indexPath, true);
-}
-         */
-        //public override string[] SectionIndexTitles(UITableView tableView)
-        //{
-        //    return new string [] { "One","Two","Three","Four" };
-        //}
-
-        //public override string TitleForHeader(UITableView tableView, nint section)
-        //{
-        //    if(section == 1)
-        //    {
-        //        return "Score";
-        //    }
-        //    else
-        //    {
-        //        return null;
-        //    }
-        //}
     }
 }

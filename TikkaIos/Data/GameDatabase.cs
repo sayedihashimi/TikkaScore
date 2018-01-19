@@ -66,7 +66,7 @@ namespace TikkaIos.Data
         {
             lock (DbLock)
             {
-                DeleteAllGames();
+                // DeleteAllGames();
                 using (var conn = new SQLiteConnection(dbPath))
                 {
                     

@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using System;
+using TikkaIos.Data;
 using UIKit;
 
 namespace TikkaIos
@@ -18,9 +19,18 @@ namespace TikkaIos
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            // table = new UITableView(View.Bounds); // defaults to Plain style
             TableView.Source = new ScoreTableViewSource(this);
-            // Add(table);
+
+            try
+            {
+                var gameDb = new GameDatabase(DatabaseConsts.GetDbPath());
+                gameDb.InsertDummyDataIfNotExists();
+            }
+            catch(Exception ex)
+            {
+                string msg = ex.ToString();
+                System.Console.WriteLine(msg);
+            }
         }
     }
 }

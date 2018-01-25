@@ -60,16 +60,19 @@ namespace TikkaIos
             if (section == 1)
             {
                 var cell = tableView.DequeueReusableCell(ScoreTableViewSource.CellIdentifier, indexPath) as ScoreTableViewCell;
-        
-//                var currentItem = items.ElementAt(indexPath.Row);
-  //              cell.SetValues(currentItem);
-
                 if(Game != null)
                 {
                     var currentScore = Game.Scores.ElementAt(indexPath.Row);
                     cell.SetValues(currentScore);
                 }
 
+                return cell;
+            }
+            else if(section == 2)
+            {
+                var cell = tableView.DequeueReusableCell(ScoreTableViewController.TotalsCellId, indexPath) as GameTotalsTableViewCell;
+                cell.UpdateValues(Game);
+                
                 return cell;
             }
             else
@@ -104,7 +107,7 @@ namespace TikkaIos
 
         public override nint NumberOfSections(UITableView tableView)
         {
-            return 4;
+            return 5;
         }
 
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)

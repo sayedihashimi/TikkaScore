@@ -68,6 +68,10 @@
     <Compile Include="Data\Game.cs" />
     <Compile Include="Data\GameDatabase.cs" />
     <Compile Include="Data\GameScore.cs" />
+    <Compile Include="GameTotalsTableViewCell.cs" />
+    <Compile Include="GameTotalsTableViewCell.designer.cs">
+      <DependentUpon>GameTotalsTableViewCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListView.cs" />
     <Compile Include="ListView.designer.cs">
       <DependentUpon>ListView.cs</DependentUpon>

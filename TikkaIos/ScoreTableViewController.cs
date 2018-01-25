@@ -9,17 +9,25 @@ namespace TikkaIos
     {
         public static string BidReceiveCellId = "bidReceiveCell";
         public static string TeamNameCellId = "teamNameCell";
+        public static string TotalsCellId = "GameTotalsCell";
         
         public ScoreTableViewController (IntPtr handle) : base (handle)
         {
             TableView.RegisterClassForCellReuse(typeof(ScoreTableViewCell), ScoreTableViewSource.CellIdentifier);
             TableView.RegisterClassForCellReuse(typeof(BidReceiveTableViewCell), BidReceiveCellId);
             TableView.RegisterClassForCellReuse(typeof(TeamNameTableViewCell), TeamNameCellId);
+            TableView.RegisterClassForCellReuse(typeof(GameTotalsTableViewCell), TotalsCellId);
+
+            
         }
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
             Game game = new GameDatabase(DatabaseConsts.GetDbPath()).GetLastGame();
+
+            TableView.SeparatorColor = UIColor.Red;
+            TableView.SeparatorStyle = UITableViewCellSeparatorStyle.SingleLineEtched;
+
             TableView.Source = new ScoreTableViewSource(this, game);
 
             try

@@ -36,7 +36,7 @@
         <scene sceneID="3028">
             <objects>
                 <tableViewController id="3029" sceneMemberID="viewController" customClass="ScoreTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="Title here">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3030">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3030">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -249,11 +249,53 @@
                                     <outlet property="scoreDetailsButton" destination="12866" id="name-outlet-12866"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="13220" reuseIdentifier="GameTotalsCell" customClass="GameTotalsTableViewCell" userInteractionEnabled="NO">
+                                <rect key="frame" x="0.0" y="248" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="13220" id="13221">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="13222" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                            <rect key="frame" x="124" y="12" width="62" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <constraints>
+                                                <constraint id="13226" firstItem="13222" firstAttribute="width" constant="45"/>
+                                            </constraints>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="13223" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                            <rect key="frame" x="332" y="12" width="62" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <constraints>
+                                                <constraint id="13227" firstItem="13223" firstAttribute="width" constant="45"/>
+                                            </constraints>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint id="13224" firstItem="13222" firstAttribute="centerY" secondItem="13221" secondAttribute="centerY"/>
+                                        <constraint id="13225" firstItem="13222" firstAttribute="leading" secondItem="13221" secondAttribute="leading" constant="124"/>
+                                        <constraint id="13228" firstItem="13221" firstAttribute="trailing" secondItem="13223" secondAttribute="trailing" constant="20"/>
+                                        <constraint id="13229" firstItem="13223" firstAttribute="centerY" secondItem="13221" secondAttribute="centerY"/>
+                                    </constraints>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    </accessibility>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelTeamAWonTotal" destination="13222" id="name-outlet-13222"/>
+                                    <outlet property="labelTeamBWonTotal" destination="13223" id="name-outlet-13223"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="3029" id="3031"/>
                             <outlet property="delegate" destination="3029" id="3032"/>
                         </connections>
+                        <color key="separatorColor" colorSpace="calibratedRGB" red="0.25490196078431371" green="0.25490196078431371" blue="0.25490196078431371" alpha="1"/>
                     </tableView>
                     <connections>
                         <outlet property="table" destination="3030" id="name-outlet-3030"/>
